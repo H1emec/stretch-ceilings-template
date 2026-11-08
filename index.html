@@ -320,6 +320,9 @@ textarea.field{height:90px;padding:14px 18px;resize:none}
   .lang-btn{width:40px;height:40px}
   .flag{width:26px;height:26px}
   .logo{font-size:1rem}
+  .nav{gap:8px}
+  .logo{flex-direction:column;align-items:flex-start;gap:0;line-height:1.05;font-size:.95rem;min-width:0}
+  .nav .tel{flex:none}
   h2{font-size:calc(clamp(27px,8vw,34px) * var(--k-h2));max-width:none}
   .v-area{padding:7px 14px;font-size:.8rem}
   .v-view{padding:4px}
@@ -356,6 +359,10 @@ textarea.field{height:90px;padding:14px 18px;resize:none}
   .field{font-size:16px}
 }
 @media (max-width:360px){
+  .logo{font-size:.85rem}
+  .nav{padding:0 6px 0 12px}
+  .nav .btn-sm{padding:0 10px;font-size:.72rem}
+  .nav .tel{gap:6px}
   .fields{grid-template-columns:1fr 1fr}
   .fields .fld:first-child{grid-column:1/-1}
 }

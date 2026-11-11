@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#efe2cf">
-<title>Натяжные потолки в Армении</title>
-<meta name="description" content="Натяжные потолки любой сложности по всей Армении. Рассчитайте стоимость по площади, посмотрите потолок в 3D и закажите замер.">
+<title>Натяжные потолки в России</title>
+<meta name="description" content="Натяжные потолки любой сложности по всей России. Рассчитайте стоимость по площади, посмотрите потолок в 3D и закажите замер.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&family=Noto+Serif+Armenian:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- Панель дизайна. Чтобы убрать её с сайта для посетителей, поставьте перед этим тегом: <script>window.FC_EDITOR=false</script> -->
 <script src="editor.js?v=3"></script>
 <style>
 :root{
-  --font:"Manrope","Noto Sans Armenian",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --display:"Playfair Display","Noto Serif Armenian",Georgia,serif;
+  --font:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Playfair Display",Georgia,serif;
   --ink:#2b2119;
   --ink-2:#5c4d41;
   --ink-3:#6b5b4d;
@@ -393,10 +393,6 @@ textarea.field{height:90px;padding:14px 18px;resize:none}
   </ul>
   <div class="tel">
     <a class="num" data-phone data-dyn href="#contacts">Позвонить</a>
-    <div class="lang" id="lang">
-      <button type="button" class="lang-btn glass" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Язык"><span class="flag" id="langFlag"></span></button>
-      <ul class="lang-menu" id="langMenu" role="menu" hidden></ul>
-    </div>
     <button class="btn btn-green btn-sm" data-order>Оформить заказ</button>
   </div>
 </header>
@@ -412,7 +408,7 @@ textarea.field{height:90px;padding:14px 18px;resize:none}
     </div>
     <div class="hero-body">
       <h1>Натяжные потолки</h1>
-      <p>Натяжные потолки любой сложности по всей Армении</p>
+      <p>Натяжные потолки любой сложности по всей России</p>
       <button class="btn btn-green" data-order>Оформить заказ</button>
     </div>
   </div>
@@ -545,7 +541,7 @@ textarea.field{height:90px;padding:14px 18px;resize:none}
     <div class="why">
       <div class="glass rv"><span class="big">1 день</span><b>Монтаж</b><p>Большинство комнат делаем за один день.</p></div>
       <div class="glass rv"><span class="big">до 15 лет</span><b>Гарантия</b><p>На полотно и на монтаж.</p></div>
-      <div class="glass rv"><span class="big">Вся Армения</span><b>Выезжаем</b><p>Работаем по Еревану и по всей стране.</p></div>
+      <div class="glass rv"><span class="big">Вся Россия</span><b>Выезжаем</b><p>Работаем по Москве и по всей стране.</p></div>
       <div class="glass rv"><span class="big">Любая сложность</span><b>Конструкции</b><p>Двухуровневые, со световыми линиями, фотопечатью.</p></div>
     </div>
   </div>
@@ -585,7 +581,7 @@ textarea.field{height:90px;padding:14px 18px;resize:none}
 </section>
 </main>
 
-<footer><div class="container">© Натяжные потолки. Натяжные потолки в Армении.</div></footer>
+<footer><div class="container">© Натяжные потолки. Натяжные потолки в России.</div></footer>
 
 <!-- ФОРМА ЗАКАЗА -->
 <dialog id="dlg">
@@ -609,194 +605,23 @@ textarea.field{height:90px;padding:14px 18px;resize:none}
 <script>
 /* ============ НАСТРОЙКИ САЙТА: меняйте только здесь ============ */
 const SITE = {
-  phone: '+374 0000000',                       // номер телефона
-  address: '',                     // например 'Ереван, ул. …'
+  phone: '+7 0000',                       // номер телефона
+  address: '',                     // например 'Москва, ул. …'
   hours: 'Ежедневно, по договорённости',
-  mapQuery: 'Yerevan, Armenia',    // адрес для карты; лучше подставить точный адрес
+  mapQuery: 'Москва, Россия',    // адрес для карты; лучше подставить точный адрес
   orderEndpoint: '',               // URL, куда отправлять заявки (POST JSON). Пусто — заявка не уходит наружу
-  // Цены в драмах (֏)
-  rates: { matt: 4000, satin: 4800, gloss: 5200 },
-  price: { corner: 1000, spot: 1500, chandelier: 4000 }
+  // Цены в рублях (₽)
+  rates: { matt: 800, satin: 950, gloss: 1050 },
+  price: { corner: 200, spot: 300, chandelier: 800 }
 };
 
-/* ============ Языки: армянский (по умолчанию), русский, английский ============ */
-/* Ключ — русский текст из разметки; значения — [армянский, английский].
-   Чтобы поправить перевод, меняйте только строки в этом словаре. */
-const I18N = {
-  'Расчёт':['Հաշվարկ','Calculator'],
-  'Работы':['Աշխատանքներ','Works'],
-  'Установка':['Տեղադրում','Installation'],
-  'Контакты':['Կոնտակտներ','Contacts'],
-  'Оформить заказ':['Պատվիրել','Order'],
-  'Оформить':['Պատվիրել','Order'],
-  'Позвонить':['Զանգահարել','Call'],
-  'Позвонить нам':['Զանգահարեք մեզ','Call us'],
-  'Номер уточняется':['Համարը կճշտվի','Number coming soon'],
-  'Телефон':['Հեռախոս','Phone'],
-  'Язык':['Լեզու','Language'],
-  'Натяжные потолки — на главную':['Ձգվող առաստաղներ — գլխավոր էջ','Stretch ceilings — home'],
-  'Натяжные потолки любой сложности по всей Армении':['Ցանկացած բարդության ձգվող առաստաղներ ողջ Հայաստանում','Stretch ceilings of any complexity across Armenia'],
-  'Натяжной потолок с подсветкой и точечными светильниками в светлой гостиной':['Լուսավորությամբ և կետային լուսարձակներով ձգվող առաստաղ լուսավոր հյուրասենյակում','Stretch ceiling with backlight and spotlights in a bright living room'],
-  'Посчитайте потолок и посмотрите его в 3D':['Հաշվարկեք առաստաղը և տեսեք այն 3D-ով','Calculate your ceiling and see it in 3D'],
-  'Введите ширину и длину, площадь посчитается сама. Или впишите готовую площадь. Углы, светильники и люстры сразу появятся на модели.':['Մուտքագրեք լայնությունը և երկարությունը՝ մակերեսը կհաշվարկվի ինքնաբերաբար։ Կամ գրեք պատրաստի մակերեսը։ Անկյունները, լուսարձակները և ջահերը անմիջապես կհայտնվեն մոդելի վրա։','Enter the width and length and the area is calculated for you. Or type in a ready-made area. Corners, spotlights and chandeliers appear on the model right away.'],
-  'Площадь':['Մակերես','Area'],
-  'Площадь:':['Մակերես՝','Area:'],
-  'Ширина':['Լայնություն','Width'],
-  'Длина':['Երկարություն','Length'],
-  'м²':['մ²','m²'],
-  'м':['մ','m'],
-  'см':['սմ','cm'],
-  'Ширина × длина = площадь. Можно ввести только площадь — комната подстроится.':['Լայնություն × երկարություն = մակերես։ Կարելի է մուտքագրել միայն մակերեսը՝ սենյակը կհարմարվի։','Width × length = area. You can enter just the area and the room will adjust.'],
-  'Дополнительные углы':['Լրացուցիչ անկյուններ','Extra corners'],
-  'Каждый выступ даёт ещё 2 угла':['Յուրաքանչյուր ելուստ ավելացնում է ևս 2 անկյուն','Each protrusion adds 2 more corners'],
-  'Меньше углов':['Քիչ անկյուններ','Fewer corners'],
-  'Больше углов':['Ավելի շատ անկյուններ','More corners'],
-  'Светильники':['Լուսարձակներ','Spotlights'],
-  'Точечные, встроенные':['Կետային, ներկառուցված','Recessed spot lights'],
-  'Меньше светильников':['Քիչ լուսարձակներ','Fewer spotlights'],
-  'Больше светильников':['Ավելի շատ լուսարձակներ','More spotlights'],
-  'Люстры':['Ջահեր','Chandeliers'],
-  'Усиленная закладная':['Ուժեղացված մոնտաժային հիմք','Reinforced mounting'],
-  'Меньше люстр':['Քիչ ջահեր','Fewer chandeliers'],
-  'Больше люстр':['Ավելի շատ ջահեր','More chandeliers'],
-  'Тип полотна':['Կտավի տեսակ','Ceiling finish'],
-  'Матовое':['Մատ','Matt'],
-  'Сатиновое':['Սատին','Satin'],
-  'Глянцевое':['Փայլուն','Gloss'],
-  'Предварительный расчёт. Точную стоимость назовём после бесплатного замера.':['Նախնական հաշվարկ։ Ճշգրիտ արժեքը կնշենք անվճար չափագրումից հետո։','Preliminary estimate. We will give the exact price after a free measurement.'],
-  'Ракурс':['Դիտանկյուն','View'],
-  'Снизу':['Ներքևից','Below'],
-  'Общий':['Ընդհանուր','Overview'],
-  'Сверху':['Վերևից','Above'],
-  'Вращайте мышью или пальцем. Добавив углы, тяните точки на полу.':['Պտտեք մկնիկով կամ մատով։ Անկյուններ ավելացնելուց հետո քաշեք կետերը հատակի վրա։','Rotate with the mouse or your finger. After adding corners, drag the points on the floor.'],
-  'Приблизить':['Մոտեցնել','Zoom in'],
-  'Отдалить':['Հեռացնել','Zoom out'],
-  '3D-вид недоступен в этом браузере, но расчёт работает как обычно.':['3D-տեսքը այս բրաուզերում հասանելի չէ, բայց հաշվարկը աշխատում է սովորականի պես։','The 3D view is not available in this browser, but the calculator works as usual.'],
-  '3D-модель комнаты. Вращайте мышью, тяните точки углов.':['Սենյակի 3D մոդել։ Պտտեք մկնիկով, քաշեք անկյունների կետերը։','3D room model. Rotate with the mouse, drag the corner points.'],
-  'Фактура и свет под ваш интерьер':['Տեքստուրա և լույս ձեր ինտերիերի համար','Texture and light for your interior'],
-  'Делаем потолки любой сложности: от простого белого полотна до двухуровневых конструкций со световыми линиями и фотопечатью.':['Պատրաստում ենք ցանկացած բարդության առաստաղներ՝ պարզ սպիտակ կտավից մինչև երկաստիճան կառուցվածքներ լուսային գծերով և ֆոտոտպագրությամբ։','We make ceilings of any complexity: from a simple white sheet to two-level structures with light lines and photo printing.'],
-  'Матовый':['Մատ','Matt'],
-  'Спокойная ровная поверхность без бликов. Выглядит как идеально окрашенный потолок, подходит для любой комнаты.':['Հանգիստ հարթ մակերես առանց շողերի։ Նման է կատարյալ ներկված առաստաղի, հարմար է ցանկացած սենյակի համար։','A calm, even surface with no glare. Looks like a perfectly painted ceiling and suits any room.'],
-  'Глянцевый':['Փայլուն','Gloss'],
-  'Зеркальная поверхность, которая отражает свет и интерьер. Визуально поднимает потолок и расширяет пространство.':['Հայելային մակերես, որն արտացոլում է լույսն ու ինտերիերը։ Տեսողականորեն բարձրացնում է առաստաղը և ընդլայնում տարածությունը։','A mirror-like surface that reflects light and the interior. Visually raises the ceiling and widens the space.'],
-  'Сатиновый':['Սատին','Satin'],
-  'Мягкий перламутровый блеск: тёплее глянца и живее матового. Делает свет в комнате глубже.':['Փափուկ մարգարտափայլ շող՝ ավելի տաք, քան փայլունը, և ավելի կենդանի, քան մատը։ Սենյակի լույսն ավելի խորն է դարձնում։','A soft pearly sheen: warmer than gloss and livelier than matt. Gives the light in the room more depth.'],
-  'Тканевый':['Գործվածքային','Fabric'],
-  'Полотно с тканевой фактурой, выглядит как штукатурка. Подходит там, где нужна особая мягкость и благородный вид.':['Գործվածքային տեքստուրայով կտավ, նման է ծեփի։ Հարմար է այնտեղ, որտեղ պետք է առանձնահատուկ փափկություն և վեհ տեսք։','A sheet with a fabric texture that looks like plaster. Suits places that need a special softness and a refined look.'],
-  'Фильтр работ':['Աշխատանքների զտիչ','Filter works'],
-  'Все работы':['Բոլոր աշխատանքները','All works'],
-  'Световые линии':['Լուսային գծեր','Light lines'],
-  'С подсветкой':['Լուսավորությամբ','With backlight'],
-  'Фотопечать':['Ֆոտոտպագրություն','Photo print'],
-  'Глянцевые':['Փայլուն','Gloss'],
-  'Двухуровневый':['Երկաստիճան','Two-level'],
-  'Матовый с подсветкой':['Մատ՝ լուսավորությամբ','Matt with backlight'],
-  'Потолок с контурной подсветкой в гостиной':['Կոնտուրային լուսավորությամբ առաստաղ հյուրասենյակում','Ceiling with contour lighting in a living room'],
-  'Потолок со световыми линиями':['Լուսային գծերով առաստաղ','Ceiling with light lines'],
-  'Потолок с фотопечатью неба':['Երկնքի ֆոտոտպագրությամբ առաստաղ','Ceiling with a sky photo print'],
-  'Глянцевый потолок отражает интерьер':['Փայլուն առաստաղն արտացոլում է ինտերիերը','A gloss ceiling reflects the interior'],
-  'Двухуровневый потолок с подсветкой в спальне':['Լուսավորությամբ երկաստիճան առաստաղ ննջասենյակում','Two-level ceiling with backlight in a bedroom'],
-  'Матовый потолок с подсветкой по периметру':['Պարագծով լուսավորությամբ մատ առաստաղ','Matt ceiling with perimeter backlight'],
-  'Как натягивается потолок':['Ինչպես է ձգվում առաստաղը','How a ceiling is installed'],
-  'Листайте фото, рядом описан каждый этап. Обычно всё занимает один день, без грязи и строительной пыли.':['Թերթեք լուսանկարները, կողքին նկարագրված է յուրաքանչյուր փուլը։ Սովորաբար ամեն ինչ տևում է մեկ օր՝ առանց կեղտի և շինարարական փոշու։','Flip through the photos, each stage is described next to them. It usually takes one day, with no mess and no construction dust.'],
-  'карусель':['կարուսել','carousel'],
-  'Мастер готовит помещение':['Վարպետը նախապատրաստում է սենյակը','The master prepares the room'],
-  'Мастер заводит полотно в профиль':['Վարպետը կտավը մտցնում է պրոֆիլի մեջ','The master fits the sheet into the profile'],
-  'Мастер заправляет край полотна в багет':['Վարպետը կտավի եզրը մտցնում է բագետի մեջ','The master tucks the edge of the sheet into the baguette'],
-  'Установка светильников и световых линий':['Լուսարձակների և լուսային գծերի տեղադրում','Installing spotlights and light lines'],
-  'Готовый глянцевый потолок':['Պատրաստի փայլուն առաստաղ','A finished gloss ceiling'],
-  'Назад':['Հետ','Back'],
-  'Вперёд':['Առաջ','Next'],
-  '1 день':['1 օր','1 day'],
-  'Монтаж':['Մոնտաժ','Installation'],
-  'Большинство комнат делаем за один день.':['Սենյակների մեծ մասը պատրաստում ենք մեկ օրում։','We finish most rooms in a single day.'],
-  'до 15 лет':['մինչև 15 տարի','up to 15 years'],
-  'Гарантия':['Երաշխիք','Warranty'],
-  'На полотно и на монтаж.':['Կտավի և մոնտաժի համար։','On the sheet and on the installation.'],
-  'Вся Армения':['Ողջ Հայաստանը','All Armenia'],
-  'Выезжаем':['Հասնում ենք','We travel'],
-  'Работаем по Еревану и по всей стране.':['Աշխատում ենք Երևանում և ողջ երկրում։','We work in Yerevan and across the whole country.'],
-  'Любая сложность':['Ցանկացած բարդություն','Any complexity'],
-  'Конструкции':['Կառուցվածքներ','Structures'],
-  'Двухуровневые, со световыми линиями, фотопечатью.':['Երկաստիճան, լուսային գծերով, ֆոտոտպագրությամբ։','Two-level, with light lines and photo printing.'],
-  'Готовые потолки':['Պատրաստի առաստաղներ','Finished ceilings'],
-  'Примеры готовых потолков в реальных квартирах — так выглядит результат после установки.':['Պատրաստի առաստաղների օրինակներ իրական բնակարաններում՝ այսպես է նայվում արդյունքը տեղադրումից հետո։','Examples of finished ceilings in real apartments: this is how the result looks after installation.'],
-  'Готовый потолок в спальне':['Պատրաստի առաստաղ ննջասենյակում','A finished ceiling in a bedroom'],
-  'Где мы находимся':['Որտեղ ենք գտնվում','Where to find us'],
-  'Адрес':['Հասցե','Address'],
-  'Режим работы':['Աշխատանքային ժամեր','Opening hours'],
-  'Карта: где находится компания':['Քարտեզ՝ որտեղ է գտնվում ընկերությունը','Map: where the company is located'],
-  'Ереван, Армения':['Երևան, Հայաստան','Yerevan, Armenia'],
-  'Ежедневно, по договорённости':['Ամեն օր, պայմանավորվածությամբ','Daily, by arrangement'],
-  'Приезжайте в офис или вызывайте замерщика к себе — выезжаем по всей Армении.':['Եկեք գրասենյակ կամ կանչեք չափագրողին ձեր տուն՝ մենք հասնում ենք ողջ Հայաստանով։','Come to our office or call a measurer to your place: we travel across all of Armenia.'],
-  'Работаем по всей Армении. Точный адрес офиса скоро появится здесь, а замерщик приедет к вам сам.':['Աշխատում ենք ողջ Հայաստանում։ Գրասենյակի ճշգրիտ հասցեն շուտով կհայտնվի այստեղ, իսկ չափագրողը ինքը կգա ձեզ մոտ։','We work across all of Armenia. The exact office address will appear here soon, and a measurer will come to you.'],
-  '© Натяжные потолки. Натяжные потолки в Армении.':['© Ձգվող առաստաղներ։ Ձգվող առաստաղներ Հայաստանում։','© Stretch ceilings. Stretch ceilings in Armenia.'],
-  'Закрыть':['Փակել','Close'],
-  'Оставьте контакты, мы свяжемся, договоримся о бесплатном замере и уточним стоимость.':['Թողեք ձեր կոնտակտները, մենք կկապվենք, կհամաձայնեցնենք անվճար չափագրումը և կճշտենք արժեքը։','Leave your contacts and we will get in touch, arrange a free measurement and confirm the price.'],
-  'Ваше имя':['Ձեր անունը','Your name'],
-  'Комментарий (необязательно)':['Մեկնաբանություն (ոչ պարտադիր)','Comment (optional)'],
-  'Отправить заявку':['Ուղարկել հայտը','Send request'],
-  'Спасибо! Заявка принята — мы скоро свяжемся с вами.':['Շնորհակալություն։ Հայտն ընդունված է՝ շուտով կկապվենք ձեզ հետ։','Thank you! Your request has been received. We will contact you soon.'],
-  /* динамические части */
-  'Полотно':['Կտավ','Sheet'],
-  'за м² со всем оснащением':['մ²-ի դիմաց՝ ամբողջ հանդերձանքով','per m² with all equipment'],
-  'Ваш расчёт:':['Ձեր հաշվարկը՝','Your estimate:'],
-  'матовое':['մատ','matt'],'сатиновое':['սատին','satin'],'глянцевое':['փայլուն','gloss'],
-  'Замер и расчёт':['Չափագրում և հաշվարկ','Measurement and estimate'],
-  'Мастер приезжает, замеряет комнату, обсуждает с вами тип полотна, свет и конструкцию.':['Վարպետը գալիս է, չափում սենյակը, քննարկում ձեզ հետ կտավի տեսակը, լույսն ու կառուցվածքը։','The master arrives, measures the room and discusses the sheet type, lighting and structure with you.'],
-  'Монтаж профиля':['Պրոֆիլի տեղադրում','Profile installation'],
-  'По лазерному уровню размечаем линию потолка и крепим багет по периметру.':['Լազերային մակարդակով նշում ենք առաստաղի գիծը և պարագծով ամրացնում բագետը։','We mark the ceiling line with a laser level and fix the baguette around the perimeter.'],
-  'Натяжка полотна':['Կտավի ձգում','Stretching the sheet'],
-  'Прогреваем полотно и аккуратно заводим края в профиль — оно ровно натягивается и остывает.':['Տաքացնում ենք կտավը և զգուշորեն մտցնում եզրերը պրոֆիլի մեջ՝ այն հավասար ձգվում է և սառչում։','We warm the sheet and carefully fit its edges into the profile; it stretches evenly as it cools.'],
-  'Свет и закладные':['Լույս և մոնտաժային հիմքեր','Lighting and mounting'],
-  'Вырезаем отверстия и ставим светильники, люстры и световые линии в заранее подготовленные закладные.':['Կտրում ենք անցքեր և տեղադրում լուսարձակներ, ջահեր ու լուսային գծեր՝ նախապես պատրաստված հիմքերում։','We cut the openings and fit spotlights, chandeliers and light lines into the pre-prepared mountings.'],
-  'Уборка и приёмка':['Մաքրում և ընդունում','Clean-up and handover'],
-  'Убираем за собой, вместе проверяем результат. Потолок готов в тот же день.':['Մաքրում ենք մեր հետևից, միասին ստուգում արդյունքը։ Առաստաղը պատրաստ է նույն օրը։','We clean up after ourselves and check the result together. The ceiling is ready the same day.']
-};
-const META = {
-  ru:{ title:'Натяжные потолки в Армении', desc:'Натяжные потолки любой сложности по всей Армении. Рассчитайте стоимость по площади, посмотрите потолок в 3D и закажите замер.' },
-  hy:{ title:'Ձգվող առաստաղներ Հայաստանում', desc:'Ցանկացած բարդության ձգվող առաստաղներ ողջ Հայաստանում։ Հաշվարկեք արժեքը ըստ մակերեսի, տեսեք առաստաղը 3D-ով և պատվիրեք չափագրում։' },
-  en:{ title:'Stretch ceilings in Armenia', desc:'Stretch ceilings of any complexity across Armenia. Calculate the price by area, see your ceiling in 3D and book a measurement.' }
-};
-const FLAGS = {
-  hy:'<svg viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="30" height="20" fill="#D90012"/><rect y="6.67" width="30" height="6.67" fill="#0033A0"/><rect y="13.33" width="30" height="6.67" fill="#F2A800"/></svg>',
-  ru:'<svg viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="6.67" width="30" height="6.67" fill="#0039A6"/><rect y="13.33" width="30" height="6.67" fill="#D52B1E"/></svg>',
-  en:'<svg viewBox="0 0 60 40" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="3"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="13"/><path d="M30 0v40M0 20h60" stroke="#C8102E" stroke-width="8"/></svg>'
-};
-const LANGS = [['hy','Հայերեն'],['ru','Русский'],['en','English']];
-const LOCALE = { hy:'ru-RU', ru:'ru-RU', en:'en-US' };
-let lang = 'hy'; // по умолчанию сайт открывается на армянском
-try { const s = localStorage.getItem('fc-lang'); if (s && FLAGS[s]) lang = s; } catch (_) {}
-const t = s => lang === 'ru' ? s : (I18N[s] ? I18N[s][lang === 'hy' ? 0 : 1] : s);
-
-/* перевод статичной разметки: текстовые узлы и атрибуты; оригинал (русский) запоминается */
-const TXT = new WeakMap(), ATTR = new WeakMap();
-const ATTRS = ['alt','placeholder','aria-label','title','aria-roledescription'];
-const skipEl = el => el.closest('[data-dyn],[id^="fc-ed"],[class*="fc-ed"],script,style,#langMenu span.nm');
-function translateStatic(){
-  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-  for (let n; (n = w.nextNode()); ) {
-    if (!n.parentElement || skipEl(n.parentElement)) continue;
-    let orig = TXT.get(n); if (orig === undefined) orig = n.nodeValue;
-    const core = orig.trim();
-    if (!core || !I18N[core]) continue;
-    TXT.set(n, orig);
-    n.nodeValue = orig.replace(core, t(core));
-  }
-  document.querySelectorAll(ATTRS.map(a => '[' + a + ']').join(',')).forEach(el => {
-    if (skipEl(el)) return;
-    let o = ATTR.get(el); if (!o) { o = {}; ATTR.set(el, o); }
-    ATTRS.forEach(a => {
-      if (!el.hasAttribute(a)) return;
-      if (!(a in o)) o[a] = el.getAttribute(a);
-      if (I18N[o[a]]) el.setAttribute(a, t(o[a]));
-    });
-  });
-}
+const t = s => s;
+const lang = 'ru';
+const LOCALE = { ru:'ru-RU' };
 
 /* ============ Контакты ============ */
 const $ = id => document.getElementById(id);
-const fmt = n => Math.round(n).toLocaleString(LOCALE[lang]) + ' ֏';
+const fmt = n => Math.round(n).toLocaleString(LOCALE[lang]) + ' ₽';
 function contacts(){
   const has = !!SITE.phone;
   const digits = SITE.phone.replace(/[^\d+]/g,'');
@@ -806,9 +631,9 @@ function contacts(){
   });
   const tx = document.querySelector('[data-phone-text]'); if (tx) tx.textContent = has ? SITE.phone : t('Позвонить нам');
   const nav = document.querySelector('.nav .num'); if (nav) nav.textContent = has ? SITE.phone : t('Контакты');
-  $('cAddr').textContent = SITE.address || t('Ереван, Армения');
+  $('cAddr').textContent = SITE.address || 'Россия';
   $('cHours').textContent = t(SITE.hours);
-  $('whereText').textContent = t(SITE.address ? 'Приезжайте в офис или вызывайте замерщика к себе — выезжаем по всей Армении.' : 'Работаем по всей Армении. Точный адрес офиса скоро появится здесь, а замерщик приедет к вам сам.');
+  $('whereText').textContent = t(SITE.address ? 'Приезжайте в офис или вызывайте замерщика к себе — выезжаем по всей России.' : 'Работаем по всей России. Точный адрес офиса скоро появится здесь, а замерщик приедет к вам сам.');
   const map = 'https://maps.google.com/maps?q=' + encodeURIComponent(SITE.address || SITE.mapQuery) + '&z=14&output=embed&hl=' + lang;
   if ($('mapFrame').getAttribute('src') !== map) $('mapFrame').src = map;
   if (has) { const c = $('cPhone'); c.textContent = SITE.phone; const hp = document.querySelector('.hero-top .chip [data-phone-text]'); if (hp) hp.textContent = SITE.phone; }
@@ -827,7 +652,7 @@ function render(){
   const total = cloth + corn + sp + ch;
   $('total').textContent = fmt(total);
   $('per').textContent = state.area ? '≈ ' + fmt(total / state.area) + ' ' + t('за м² со всем оснащением') : '';
-  const L = [[t('Полотно') + ' · ' + ru(state.area) + ' ' + t('м²') + ' × ' + R.toLocaleString(LOCALE[lang]) + ' ֏', cloth]];
+  const L = [[t('Полотно') + ' · ' + ru(state.area) + ' ' + t('м²') + ' × ' + R.toLocaleString(LOCALE[lang]) + ' ₽', cloth]];
   if (state.extra) L.push([t('Дополнительные углы') + ' · ' + state.extra, corn]);
   if (state.spots) L.push([t('Светильники') + ' · ' + state.spots, sp]);
   if (state.chand) L.push([t('Люстры') + ' · ' + state.chand, ch]);
@@ -842,10 +667,8 @@ function render(){
   document.querySelector('[data-step=chand] [data-d="1"]').disabled = state.chand >= 5;
   const fin = t({matt:'матовое',satin:'сатиновое',gloss:'глянцевое'}[state.finish]), a = ru(state.area), m2 = t('м²');
   state.summary = {
-    ru: 'Площадь ' + a + ' м², ' + fin + ' полотно, углов ' + state.corners + ', светильников ' + state.spots + ', люстр ' + state.chand + ' — около ' + fmt(total),
-    hy: 'Մակերես ' + a + ' ' + m2 + ', ' + fin + ' կտավ, անկյուններ՝ ' + state.corners + ', լուսարձակներ՝ ' + state.spots + ', ջահեր՝ ' + state.chand + ' — մոտ ' + fmt(total),
-    en: 'Area ' + a + ' ' + m2 + ', ' + fin + ' finish, corners: ' + state.corners + ', spotlights: ' + state.spots + ', chandeliers: ' + state.chand + ' — about ' + fmt(total)
-  }[lang];
+    ru: 'Площадь ' + a + ' м², ' + fin + ' полотно, углов ' + state.corners + ', светильников ' + state.spots + ', люстр ' + state.chand + ' — около ' + fmt(total)
+  }.ru;
 }
 
 function onInfo(i){
@@ -946,34 +769,6 @@ $('form').addEventListener('submit', async e => {
   if (SITE.orderEndpoint) { try { await fetch(SITE.orderEndpoint, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) }); } catch (_) {} }
   e.target.style.display = 'none'; $('ok').style.display = 'block'; e.target.reset();
 });
-
-/* ============ Переключатель языка ============ */
-const langBtn = $('langBtn'), langMenu = $('langMenu');
-langMenu.innerHTML = LANGS.map(l => '<li role="none"><button type="button" role="menuitemradio" data-lang="' + l[0] + '" aria-checked="false"><span class="flag">' + FLAGS[l[0]] + '</span><span class="nm">' + l[1] + '</span></button></li>').join('');
-function menu(open){
-  langMenu.hidden = !open; langBtn.setAttribute('aria-expanded', open);
-  if (open) { const cur = langMenu.querySelector('[aria-checked=true]'); cur && cur.focus(); }
-}
-langBtn.addEventListener('click', () => menu(langMenu.hidden));
-langMenu.addEventListener('click', e => { const b = e.target.closest('button[data-lang]'); if (!b) return; applyLang(b.dataset.lang); menu(false); langBtn.focus(); });
-document.addEventListener('click', e => { if (!langMenu.hidden && !$('lang').contains(e.target)) menu(false); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && !langMenu.hidden) { menu(false); langBtn.focus(); } });
-
-function applyLang(l){
-  lang = l;
-  try { localStorage.setItem('fc-lang', l); } catch (_) {}
-  document.documentElement.lang = l;
-  document.title = META[l].title;
-  document.querySelector('meta[name=description]').setAttribute('content', META[l].desc);
-  $('langFlag').innerHTML = FLAGS[l];
-  langMenu.querySelectorAll('button').forEach(b => b.setAttribute('aria-checked', b.dataset.lang === l));
-  translateStatic();
-  contacts(); buildSteps(); go(cur);
-  render();
-  [['nA','area'],['nW','width'],['nL','length']].forEach(p => { if (document.activeElement !== $(p[0])) $(p[0]).value = ru(state[p[1]]); });
-  if (dlg.open) $('sum').textContent = t('Ваш расчёт:') + ' ' + state.summary;
-}
-applyLang(lang);
 
 /* ============ Появление блоков ============ */
 const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold:.12 }) : null;
